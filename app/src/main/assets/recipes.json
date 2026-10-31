@@ -1,0 +1,30 @@
+
+{
+  "recipes": [
+    {
+      "name": "Garlic Butter Shrimp",
+      "ingredients": ["Shrimp", "Butter", "Garlic", "Lemon juice", "Parsley"],
+      "method": "Sauté minced garlic in melted butter, toss in the shrimp until pink, then stir in lemon juice and chopped parsley before serving."
+    },
+    {
+      "name":  "Teriyaki Beef Stir-Fry",
+      "ingredients": ["Sliced beef", "Broccoli florets", "Teriyaki sauce", "Soy sauce", "Vegetable oil"],
+      "method": "Sear the beef in hot oil, toss in the broccoli, pour over the teriyaki and soy sauce, and stir-fry until the sauce thickens and the beef is cooked through."
+    },
+    {
+      "name": "Banana Pancake",
+      "ingredients": ["Ripe banana", "Egg", "Flour", "Milk"],
+      "method": "Mash the banana, whisk it together with the egg, flour, and milk, then pour batter onto a hot greased skillet and cook until golden brown on both sides."
+    },
+    {
+      "name": "Caprese Salad",
+      "ingredients": ["Fresh mozzarella", "Tomatoes", "Fresh basil", "Olive oil", "Balsamic glaze"],
+      "method": "Arrange alternating slices of mozzarella and tomatoes on a plate, tuck in basil leaves, and drizzle with olive oil and balsamic glaze."
+    },
+    {
+      "name": "Chicken Quesadilla",
+      "ingredients": ["Flour tortilla", "Shredded chicken", "Shredded cheese", "Olive oil"],
+      "method": "Place cheese and chicken on half of a tortilla, fold it over, and fry in a lightly oiled skillet until the tortilla is crispy and the cheese is melted."
+    }
+  ]
+}
