@@ -17,6 +17,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import android.widget.AdapterView;
+import android.content.Intent;
+
 
 public class RecipeListFragment extends Fragment {
 
@@ -61,6 +64,16 @@ public class RecipeListFragment extends Fragment {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,recipeNames);
 
         list.setAdapter(adapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> list, View row, int index, long rowID) {
+                Intent intent = new Intent(getActivity(), RecipeDetailsActivity.class);
+                intent.putExtra("recipeIndex", index);
+                startActivity(intent);
+
+            }
+        });
         return view;
 
     }
