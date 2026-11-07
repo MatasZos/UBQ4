@@ -68,9 +68,14 @@ public class RecipeListFragment extends Fragment {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> list, View row, int index, long rowID) {
-                Intent intent = new Intent(getActivity(), RecipeDetailsActivity.class);
-                intent.putExtra("recipeIndex", index);
-                startActivity(intent);
+
+                if(getActivity().findViewById(R.id.details_container)!= null){
+                    ((MainActivity)getActivity()).showRecipe(index);
+                }else {
+                    Intent intent = new Intent(getActivity(), RecipeDetailsActivity.class);
+                    intent.putExtra("recipeIndex", index);
+                    startActivity(intent);
+                }
 
             }
         });

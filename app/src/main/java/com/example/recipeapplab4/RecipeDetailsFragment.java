@@ -27,7 +27,11 @@ public class RecipeDetailsFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_recipe_details, container, false);
 
         Intent intent = getActivity().getIntent();
-        int recipeIndex = intent.getIntExtra("recipeIndex", -1);
+        int recipeIndex = intent.getIntExtra("recipeIndex", 0);
+
+        if(getArguments() != null){
+            recipeIndex = getArguments().getInt("recipeIndex",0);
+        }
 
         Log.d("RecipeApp", "Recipe Index Selected: " + recipeIndex);
 

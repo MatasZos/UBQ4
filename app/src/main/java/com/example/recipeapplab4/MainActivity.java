@@ -32,5 +32,28 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.fragment_container, new RecipeListFragment());
         transaction.commit();
 
+        if(findViewById(R.id.details_container) != null){
+            FragmentTransaction detailsTransaction = fragmentManager.beginTransaction();
+
+            detailsTransaction.replace(R.id.details_container,new RecipeDetailsFragment());
+            detailsTransaction.commit();
+        }
+    }
+
+    public void showRecipe(int index){
+        RecipeDetailsFragment detailsFragment = new RecipeDetailsFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("recipeIndex", index);
+        detailsFragment.setArguments(bundle);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+        transaction.replace(R.id.details_container, detailsFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+
+
     }
 }
