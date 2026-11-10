@@ -50,8 +50,7 @@ public class RecipeListFragment extends Fragment {
 
             scanner.close();
 
-            JSONObject jsonObject = new JSONObject(jsonText);
-            JSONArray recipes = jsonObject.getJSONArray("recipes");
+            JSONArray recipes = new JSONArray(jsonText);
 
             for(int i=0; i<recipes.length();i++) {
                 JSONObject recipe = recipes.getJSONObject(i);

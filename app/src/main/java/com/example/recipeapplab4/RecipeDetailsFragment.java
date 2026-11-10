@@ -45,8 +45,7 @@ public class RecipeDetailsFragment extends Fragment {
             }
             scanner.close();
 
-            JSONObject jsonObject = new JSONObject(jsonText);
-            JSONArray recipes = jsonObject.getJSONArray("recipes");
+            JSONArray recipes = new JSONArray(jsonText);
 
             JSONObject recipe = recipes.getJSONObject(recipeIndex);
             TextView recipeName = view.findViewById(R.id.recipeName);
